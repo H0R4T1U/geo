@@ -1,0 +1,14 @@
+{
+  "name": "geo",
+  "version": "1.0.0",
+  "description": "In progress",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./src/main.js"
+  },
+  "author": "Horatiu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^15.3.0"
+  }
+}
