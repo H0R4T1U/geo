@@ -10,5 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^15.3.0"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.8"
   }
 }

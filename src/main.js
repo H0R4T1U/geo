@@ -1,13 +1,17 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
-const apth = require('path')
+
+
 
 function createWindow () {
     const win = new BrowserWindow({
       width: 800,
       height: 600,
       webPreferences:{
-          preload: path.join(__dirname,'preload.js')
+          nodeIntegration:false,
+          contextIsolation:true,
+          enableRemoteModule: false,
+          preload: path.join(__dirname,'preload.js'),
       }
     })
   
@@ -15,9 +19,10 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
-createWindow()
+  createWindow()
+  
 })
 
 app.on('window-all-closed', function () {
-if (process.platform !== 'darwin') app.quit()
+  if (process.platform !== 'darwin') app.quit()
 })
